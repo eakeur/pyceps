@@ -5,7 +5,7 @@ import re
 def compare(
     their_cep: str, 
     my_cep: str, 
-    resemblance: list[str],
+    resemblance: list[str] = [],
     rules: list[tuple[int, str]] = [
         (0, "region"),
         (1, "subregion"),

@@ -15,7 +15,7 @@ def cep(theirs: str, mine: str):
     if theirs == mine: 
         return {"error": "It will not be funny if you provide the same CEP as yours"}
 
-    resemblances = ceps.compare(theirs, mine, [])
+    resemblances = ceps.compare(theirs, mine)
     if len(resemblances) <= 0:
         return "Y'all live really far from each other"
 
