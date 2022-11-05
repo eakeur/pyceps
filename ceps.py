@@ -23,8 +23,7 @@ def compare(
     if not their_cep[digit] == my_cep[digit]:
         return resemblance
 
-    resemblance.append(result)
-    return compare(their_cep, my_cep, resemblance, rules[1:])
+    return compare(their_cep, my_cep, resemblance + [result], rules[1:])
 
 
 def valid(cep: Union[str, None], validator = re.compile(r'(\d){5}(\d){3}')):
